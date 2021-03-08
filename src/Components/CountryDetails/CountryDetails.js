@@ -13,7 +13,7 @@ const CountryDetails = () => {
     fetch(`https://restcountries.eu/rest/v2/name/${CountryDetails}`)
       .then((response) => response.json())
       .then((data) => setCountryDetails(data[0]));
-  }, []);
+  }, [CountryDetails]);
   console.log(countryDetail);
   const { name, flag, capital, region, nativeName, population } = countryDetail;
   return (
